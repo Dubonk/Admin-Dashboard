@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body {
+    font-family: 'roboto', sans-serif;
     height: 100vh;
     width: auto;
     margin: 0;
@@ -7,34 +9,45 @@ body {
     height: 100vh;
     width: auto;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: 1fr 5fr;
+    background-color: rgb(236, 236, 236);
 }
 .header {
-    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 4fr 1fr; 
+    grid-column: 2 / 4;
     grid-row: 1 / 2;
-    box-shadow: 5px 10px red;
+    background-color: white;
+    box-shadow: 0px 1px 5px grey;
+    padding: 25px;
+}
+.searchbar {
+    width: 700px;
+    border: none;
+    background-color: rgb(229, 238, 238);
+    border-radius: 15px;
 }
 .dashboard {
+    padding-left: 25px;
     font-size: large;
     font-weight: bolder;
     grid-row: 1 / 3;
     grid-column: 1 / 2;
     background-color: rgb(51, 153, 236);
     color: rgb(255, 255, 255);
+    display: grid;
 }
 .cards {
-    background-color: rgb(236, 236, 236);
     grid-row: 2;
     grid-column: 2 / 3;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 10px;
-    align-items: center;
-    justify-items: center;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 25px;
+    padding: 25px;
 }
 .card {
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     border-radius: 8px;
     box-shadow: 1px 2px 5px rgb(179, 177, 177);
     border-left-style: solid;
@@ -42,16 +55,43 @@ body {
     padding: 35px;
     
 }
+.announcements {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.minicard {
+}
 button {
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 30px;
+    border-radius: 20px;
+    border-style: none;
     background-color: rgb(51, 146, 236);
     color: aliceblue;
+    font-weight: bold;
 }
-.searchbar {
-    border: none;
-    background-color: rgb(231, 228, 228);
-    border-radius: 8px;
-}
+
 ul {
     list-style-type: none;
+    font-size: 24px;
 }
-//this is wack//
+li {
+    margin-bottom: 20px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    font-size: larger;
+    text-decoration: underline;
+}
+button:hover {
+    font-size: large;
+    text-decoration: underline;
+    box-shadow: 0px 2px 3px rgb(51, 146, 236);
+}
